@@ -4,20 +4,11 @@ import { exerciseOptions,fetchData } from '../utils/fetchData';
 
 
 
-const SearchExercises = ({setExercises,bodyPart,setBodyPart}) => {
+const SearchExercises = ({setExercises}) => {
 
   const [search, setSearch] = useState('')
   const [bodyParts, setBodyParts] = useState([]); 
 
-  useEffect(() => {
-    const fetchExercisesData = async () => {
-      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-
-      setBodyParts(['all', ...bodyPartsData]);
-    };
-
-    fetchExercisesData();
-  }, []); //dependecny arrray je prazan jer ga na startu pokrecemo odmah
 
 
   //fetchuje podatke sa apija zato async fja
