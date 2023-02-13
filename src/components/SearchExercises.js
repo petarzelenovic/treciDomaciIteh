@@ -7,9 +7,6 @@ import { exerciseOptions,fetchData } from '../utils/fetchData';
 const SearchExercises = ({setExercises}) => {
 
   const [search, setSearch] = useState('')
-  const [bodyParts, setBodyParts] = useState([]); 
-
-
 
   //fetchuje podatke sa apija zato async fja
   const handleSearch=async () => {
